@@ -14,7 +14,7 @@ pipeline {
             //   }
         stage{
             steps{
-                withCredentials([string(credentialsId: 'AWS_ID', variable: '')]){
+                withCredentials([string(credentialsId: 'AWS_ID', variable: 'null')]){
                     script {
                         env.AWS_ACCESS_KEY_ID = creds['ACCESS_KEY_ID']
                         env.AWS_SECRET_ACCESS_KEY = creds['SECRET_ACCESS_KEY']
